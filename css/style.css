@@ -195,6 +195,7 @@ display: flex;
 margin: 0 auto;
 justify-content: space-between;
 align-items: center;
+
 }
 
 .header-nav {
@@ -215,7 +216,14 @@ margin: 0;
 padding: 0;
 }
 .first-section {
-padding: 188px 0
+padding: 188px 0;
+position: relative;
+background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+),
+url(../images/people-office.jpg);
+background-position: center;
 }
 .page-title {
     text-align: center;
@@ -278,4 +286,22 @@ margin: 0;
 .page-footer {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.icons-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+.icon-team {
+
+fill: #f4f4fd;
+background-color: #4d5ae5;
+height: 40px;
+width: 40px;
+padding: 12px;
+border-radius: 50%;
 }
