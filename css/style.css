@@ -188,6 +188,7 @@ img {
 }
 .page-header {
 border-bottom: 1px solid #e7e9fc;
+box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -224,6 +225,8 @@ background-image: linear-gradient(
 ),
 url(../images/people-office.jpg);
 background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 .page-title {
     text-align: center;
@@ -282,10 +285,39 @@ margin: 0;
 
 .item-card {
      width: calc((100% - 48px) / 3);
+    overflow: hidden;
+    position: relative;
 }
 .page-footer {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.current {
+    position: relative;
+    color: #404bbf;;
+}
+.page-nav.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+}
+.icon-features-div {
+display: flex;
+justify-content: center;
+padding-top: 24px;
+padding-bottom: 24px;
+border: 1px solid #8e8f99;
+border-radius: 4px;
+width: 264px;
+height: 112px;
+margin-bottom: 8px;
+background: #f4f4fd;
 }
 .icons-div {
     display: flex;
@@ -297,11 +329,67 @@ margin: 0;
     margin-top: 8px;
 }
 .icon-team {
-
 fill: #f4f4fd;
+}
+
+.link-icon-team , .link-icon-footer {
+    display: block;
 background-color: #4d5ae5;
-height: 40px;
-width: 40px;
-padding: 12px;
-border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 12px;
+    border-radius: 50%;
+transition-property: background-color;
+}
+.link-icon-team:hover {
+    background-color: #404bbf;;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 300px;
+    background: #4d5ae5;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transform: translateX(-100%);
+    transition: transform 250ms ease-in-out;
+}
+.overlay-p {
+font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.item-card:hover .overlay {
+transform: translateX(0);
+}
+.social {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+margin: 0;
+}
+.icons-div-footer {
+display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-shrink: 0;
+    margin-top: 12px;
+    align-items: flex-start;
+}
+.footer-media {
+   margin: 0;
+   padding: 0;
+}
+.link-icon-footer:hover ,
+.link-icon-footer:focus
+ {
+background-color: #31d0aa;
 }
