@@ -296,7 +296,7 @@ margin: 0;
     position: relative;
     color: #404bbf;;
 }
-.page-nav.current::after {
+.current::after {
     content: "";
     position: absolute;
     left: 0;
